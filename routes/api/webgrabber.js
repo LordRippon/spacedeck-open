@@ -32,7 +32,13 @@ function website_to_png(url,on_success,on_error) {
           browser = await puppeteer.launch(
             {
               headless: true,
-              args: ['--disable-dev-shm-usage', '--no-sandbox']
+              args: [
+                '--no-sandbox',  // Disable the sandbox (useful in Docker)
+                '--disable-setuid-sandbox',  // Additional security measure
+                '--disable-dev-shm-usage',  // Workaround for shared memory issues in Docker
+                '--disable-gpu'  // To ensure headless operation
+              ],
+              timeout: 60000  // Set a higher timeout (optional, increases wait time)
             }
           );
           page = await browser.newPage();
