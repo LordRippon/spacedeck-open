@@ -19,7 +19,7 @@ We appreciate filed issues, pull requests and general discussion.
 - Turn your Space into a zooming presentation
 - Collaborate in realtime with teammates, students or friends
 - Share Spaces on the web or via email
-- Export your work as printable PDF or ZIP (currently being fixed, stay tuned)
+- Export your work as printable PDF
 
 # Use Cases
 
